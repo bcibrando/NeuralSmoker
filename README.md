@@ -1,71 +1,30 @@
-# NeuralSmoker
-const express = require('express');
-const axios = require('axios');
-const { Notion } = require('@neurosity/notion');
+Connect to the fingerbot with a Neurosity brain computer. In this case I use focus brainwaves to control a fingerbot through a Tuya HA integration. 
 
-const app = express();
-const PORT = 3001;
+For fun and to reduce brain fog I created the world’s first neural smoker. 
 
-const FOCUS_THRESHOLD = 0.25;
-const HA_SERVER_URL = 'WHATEVER YOUR SERVER URL IS';
-const HA_TOKEN = 'TOKEN GENERATED IN HA PORTAL';
-const HA_ENTITY_ID = 'switch.finger_robot_2_switch'; //USE HACLI TO FIND ID
+Requirements:
+Neurosity-NotionSDK: https://github.com/neurosity/neurosity-sdk-js 
 
-const notion = new Notion();
-let currentFocusScore = 0;
+HomeAssistant: https://www.home-assistant.io/
 
-async function loginToNeurosity() {
-    try {
-        await notion.login({
-            email: "YOUR NEUROSITY LOGIN",
-            password: "YOUR NEUROSITY PASSWORD"
-        });
-        console.log("Logged in to Neurosity");
-    } catch (error) {
-        console.error("Error logging in:", error);
-    }
-}
+HACLI: https://github.com/home-assistant-ecosystem/home-assistant-cli
 
-loginToNeurosity();
+Extras: 
 
-notion.focus().subscribe(focusData => {
-    console.log("Received focus data:", focusData);
-    if (focusData && focusData.probability) {
-        currentFocusScore = focusData.probability;
-        console.log("Updated Focus score:", currentFocusScore);
+Moes Fingerbot: https://moeshouse.com/products/smart-bluetooth-fingerbot?utm_source=google02&utm_medium=cpc&network=x&keyword=&campaignid=20418884134&gad_source=1&gclid=EAIaIQobChMI2dHrgJeChAMVpzXUAR0dVQ0xEAAYASAAEgJ1nvD_BwE
 
-        if (currentFocusScore > FOCUS_THRESHOLD) {
-            console.log("Focus threshold crossed. Triggering Home Assistant command.");
-            axios.post(`${HA_SERVER_URL}/api/services/switch/turn_on`, {
-                entity_id: HA_ENTITY_ID
-            }, {
-                headers: {
-                    'Authorization': `Bearer ${HA_TOKEN}`,
-                    'Content-Type': 'application/json'
-                }
-            }).then(response => {
-                console.log('Switch turned on:', response.data);
-            }).catch(error => {
-                console.error('Error turning on switch:', error);
-            });
-        }
-    } else {
-        console.log("Focus score data not received or undefined.");
-    }
-});
+Raw Smoke Thrower:
+https://rawthentic.com/prawducts/smoking-gear/holders-ashtrays/raw-smoke-thrower/
 
-app.get('/', (req, res) => {
-    res.send('Neurosity Middleware Running');
-});
 
-app.get('/focus', (req, res) => {
-    res.json({ focusScore: currentFocusScore });
-});
+Connect to HA
 
-app.listen(PORT, () => {
-    console.log(`Middleware listening at http://localhost:${PORT}`);
-});
+Generate a long lived access token via the HA portal. 
 
+Add any devices via HA integration/bluetooth
+In this instance it is the FingerBot via HA Tuya integration. 
+
+Install HACLI to find the HA-ENTITY ID on your local server. 
 
 
  
