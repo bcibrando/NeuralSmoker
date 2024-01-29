@@ -5,13 +5,17 @@ Connect to the fingerbot with a Neurosity brain computer. In this case I use foc
 For fun and to reduce brain fog I created the world’s first neural smoker. 
 
 Requirements:
-Neurosity-NotionSDK https://github.com/neurosity/neurosity-sdk-js 
-HomeAssistant https://www.home-assistant.io/
-HACLI https://github.com/home-assistant-ecosystem/home-assistant-cli
 
-Extras: Moes Fingerbot https://moeshouse.com/products/smart-bluetooth-fingerbot?utm_source=google02&utm_medium=cpc&network=x&keyword=&campaignid=20418884134&gad_source=1&gclid=EAIaIQobChMI2dHrgJeChAMVpzXUAR0dVQ0xEAAYASAAEgJ1nvD_BwE
+Neurosity-NotionSDK: https://github.com/neurosity/neurosity-sdk-js 
 
-Raw Smoke Thrower - 
+HomeAssistant: https://www.home-assistant.io/
+
+HACLI: https://github.com/home-assistant-ecosystem/home-assistant-cli
+
+Extras: 
+Moes Fingerbot: https://moeshouse.com/products/smart-bluetooth-fingerbot?utm_source=google02&utm_medium=cpc&network=x&keyword=&campaignid=20418884134&gad_source=1&gclid=EAIaIQobChMI2dHrgJeChAMVpzXUAR0dVQ0xEAAYASAAEgJ1nvD_BwE
+
+Raw Smoke Thrower:
 https://rawthentic.com/prawducts/smoking-gear/holders-ashtrays/raw-smoke-thrower/
 
 STEPS: 
