@@ -1,4 +1,6 @@
-Connect to the fingerbot with a Neurosity brain computer. In this case I use focus brainwaves to control a fingerbot through a Tuya HA integration. 
+NEURAL SMOKER 
+
+By connecting the fingerbot to my Neurosity brain computer I was able to blow off some steam! In this case I used focus brainwaves to control a fingerbot through a Tuya HA integration to control a RAW Smoke Thrower. 
 
 For fun and to reduce brain fog I created the world’s first neural smoker. 
 
