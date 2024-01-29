@@ -3,6 +3,7 @@ Connect to the fingerbot with a Neurosity brain computer. In this case I use foc
 For fun and to reduce brain fog I created the world’s first neural smoker. 
 
 Requirements:
+
 Neurosity-NotionSDK: https://github.com/neurosity/neurosity-sdk-js 
 
 HomeAssistant: https://www.home-assistant.io/
