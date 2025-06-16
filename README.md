@@ -2,7 +2,7 @@ NEURALSMOKER - OG Brain Fogger
 
 The worlds first neural smoking device. 
 
-Connect Tuya Fingerbot to the Neurosity Crown and blow off some steam! In this case I used focus brainwaves to control the fingerbot switch through a Tuya HA integration. Focus on the switch and watch the Smoker throw some serious clouds. The logic can be adapted to control other devices connected to your smart home's wifi server!
+Connect Tuya Fingerbot to the Neurosity Crown and blow off some steam! In this case I used focus brainwaves to control the fingerbot switch through a Tuya HA integration. Focus on the switch and watch the Smoker throw some serious clouds. The logic can be adapted to control other devices connected to your smart home's wifi server! HA!
 
 
 Requirements:
